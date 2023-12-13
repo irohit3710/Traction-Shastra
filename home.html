@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+        crossorigin="anonymous"></script>
+    <link href="css/bootstrap.css" rel="stylesheet" />
+    <link href="css/rotating-card.css" rel="stylesheet" />
+    <link rel="stylesheet" href="css/navigation.css">
+    <link href="https://netdna.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet" />
+    <title>Navigation Bar</title>
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #333;
+        }
+
+        /* Navigation Bar Styles */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .nav-links a {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 10px;
+        }
+
+        .nav-links a.logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .nav-links a:hover {
+            background-color: #ddd;
+            color: black;
+            transition-duration: 200ms;
+        }
+
+        /* Search Bar Styles */
+        .search-container {
+            float: right;
+            padding: 14px 16px;
+        }
+
+        #nav-input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 14px;
+            border: none;
+        }
+
+        #nav-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 6px;
+            margin-top: 8px;
+            margin-left: 6px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #nav-btn:hover {
+            background: #45a049;
+        }
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Footer Columns */
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Individual Column Styles */
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex: 1;
+        }
+
+        /* Centered Content */
+        .footer-center {
+            text-align: center;
+        }
+
+        .carousel-item {
+            height: 65vh;
+            min-height: 350px;
+            background: no-repeat center center scroll;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            -o-background-size: cover;
+            background-size: cover;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Navigation Bar -->
+    <!-- <nav>
+        <div class="nav-links">
+            <a href="#" class="logo">Logo</a>
+            <a href="/home.html">Home</a>
+            <a href="#">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/ourWorks.html">Works</a>
+        </div>
+
+        <div class="search-container">
+            <input id="nav-input" type="text" placeholder="Search...">
+            <button id="nav-btn" type="submit">Search</button>
+        </div>
+    </nav> -->
+
+    <!-- <nav class="nav">
+        <div class="container">
+            <h1 class="logo"><a href="#"><i class="fa-solid fa-moon"></i> My Website</a></h1>
+            <ul>
+                <li><a href="/home.html" class="current">Home</a></li>
+                <li><a href="/ourWorks.html">About</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/ourWorks.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav> -->
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="/home.html" class="current">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/ourWorks.html">Works</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Your page content goes here -->
+
+    <!-- caraousel -->
+    <header style="margin-top: 100px;">
+        <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active"
+                    aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1"
+                    aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2"
+                    aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <div class="carousel-item active"
+                    style="background-image: url('https://source.unsplash.com/RCAhiGJsUUE/1920x1080')">
+                    <div class="carousel-caption">
+                        <h5>First slide label</h5>
+                        <p>Some representative placeholder content for the first slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://source.unsplash.com/wfh8dDlNFOk/1920x1080')">
+                    <div class="carousel-caption">
+                        <h5>Second slide label</h5>
+                        <p>Some representative placeholder content for the second slide.</p>
+                    </div>
+                </div>
+                <div class="carousel-item"
+                    style="background-image: url('https://source.unsplash.com/lHGeqh3XhRY/1920x1080')">
+                    <div class="carousel-caption">
+                        <h5>Third slide label</h5>
+                        <p>Some representative placeholder content for the third slide.</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions"
+                data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </header>
+
+
+    <div
+        style="display: flex; flex-direction: row; margin: 25px; gap: 20px; width: 70%; justify-content: center; margin:auto; margin-top: 20px; width: 810px;">
+        <!-- rotating card 1 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <div class="cover">
+                        <img src="images/rotating_card_thumb3.png" />
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" src="images/rotating_card_profile.png" />
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h3 class="name">Inna Corman</h3>
+                            <p class="profession">Product Manager</p>
+
+                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it
+                                anywhere, yeah, they love me everywhere"</p>
+                        </div>
+                        <div class="footer">
+                            <div class="rating">
+                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="header">
+                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h4 class="text-center">Job Description</h4>
+                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...
+                            </p>
+
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>235</h4>
+                                    <p>
+                                        Followers
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>114</h4>
+                                    <p>
+                                        Following
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>35</h4>
+                                    <p>
+                                        Projects
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="social-links text-center">
+                            <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="google"><i
+                                    class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+
+        <!-- rotating card 2 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <div class="cover">
+                        <img src="images/rotating_card_thumb3.png" />
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" src="images/rotating_card_profile.png" />
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h3 class="name">Inna Corman</h3>
+                            <p class="profession">Product Manager</p>
+
+                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it
+                                anywhere, yeah, they love me everywhere"</p>
+                        </div>
+                        <div class="footer">
+                            <div class="rating">
+                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="header">
+                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h4 class="text-center">Job Description</h4>
+                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...
+                            </p>
+
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>235</h4>
+                                    <p>
+                                        Followers
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>114</h4>
+                                    <p>
+                                        Following
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>35</h4>
+                                    <p>
+                                        Projects
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="social-links text-center">
+                            <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="google"><i
+                                    class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+    </div>
+
+    <div
+        style="display: flex; flex-direction: row; margin: 25px; gap: 20px; width: 70%; justify-content: center; margin:auto; margin-top: 20px; width: 810px;">
+        <!-- rotating card 1 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <div class="cover">
+                        <img src="images/rotating_card_thumb3.png" />
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" src="images/rotating_card_profile.png" />
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h3 class="name">Inna Corman</h3>
+                            <p class="profession">Product Manager</p>
+
+                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it
+                                anywhere, yeah, they love me everywhere"</p>
+                        </div>
+                        <div class="footer">
+                            <div class="rating">
+                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="header">
+                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h4 class="text-center">Job Description</h4>
+                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...
+                            </p>
+
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>235</h4>
+                                    <p>
+                                        Followers
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>114</h4>
+                                    <p>
+                                        Following
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>35</h4>
+                                    <p>
+                                        Projects
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="social-links text-center">
+                            <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="google"><i
+                                    class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+
+        <!-- rotating card 2 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <div class="cover">
+                        <img src="images/rotating_card_thumb3.png" />
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" src="images/rotating_card_profile.png" />
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h3 class="name">Inna Corman</h3>
+                            <p class="profession">Product Manager</p>
+
+                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it
+                                anywhere, yeah, they love me everywhere"</p>
+                        </div>
+                        <div class="footer">
+                            <div class="rating">
+                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="header">
+                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h4 class="text-center">Job Description</h4>
+                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...
+                            </p>
+
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>235</h4>
+                                    <p>
+                                        Followers
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>114</h4>
+                                    <p>
+                                        Following
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>35</h4>
+                                    <p>
+                                        Projects
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="social-links text-center">
+                            <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="google"><i
+                                    class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+    </div>
+
+
+    <div
+        style="display: flex; flex-direction: row; margin: 25px; gap: 20px; width: 70%; justify-content: center; margin:auto; margin-top: 20px; width:400px;">
+        <!-- rotating card 1 -->
+        <div class="card-container">
+            <div class="card">
+                <div class="front">
+                    <div class="cover">
+                        <img src="images/rotating_card_thumb3.png" />
+                    </div>
+                    <div class="user">
+                        <img class="img-circle" src="images/rotating_card_profile.png" />
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h3 class="name">Inna Corman</h3>
+                            <p class="profession">Product Manager</p>
+
+                            <p class="text-center">"I'm the new Sinatra, and since I made it here I can make it
+                                anywhere, yeah, they love me everywhere"</p>
+                        </div>
+                        <div class="footer">
+                            <div class="rating">
+                                <i class="fa fa-mail-forward"></i> Auto Rotation
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end front panel -->
+                <div class="back">
+                    <div class="header">
+                        <h5 class="motto">"To be or not to be, this is my awesome motto!"</h5>
+                    </div>
+                    <div class="content">
+                        <div class="main">
+                            <h4 class="text-center">Job Description</h4>
+                            <p class="text-center">Web design, Adobe Photoshop, HTML5, CSS3, Corel and many others...
+                            </p>
+
+                            <div class="stats-container">
+                                <div class="stats">
+                                    <h4>235</h4>
+                                    <p>
+                                        Followers
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>114</h4>
+                                    <p>
+                                        Following
+                                    </p>
+                                </div>
+                                <div class="stats">
+                                    <h4>35</h4>
+                                    <p>
+                                        Projects
+                                    </p>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="footer">
+                        <div class="social-links text-center">
+                            <a href="https://creative-tim.com" class="facebook"><i class="fa fa-facebook fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="google"><i
+                                    class="fa fa-google-plus fa-fw"></i></a>
+                            <a href="https://creative-tim.com" class="twitter"><i class="fa fa-twitter fa-fw"></i></a>
+                        </div>
+                    </div>
+                </div> <!-- end back panel -->
+            </div> <!-- end card -->
+        </div> <!-- end card-container -->
+    </div>
+
+
+
+
+    <!-- Footer Section -->
+    <footer>
+        <div class="footer-columns">
+            <div class="footer-left">
+                This is a test website made by Rohit Panwar from Saharanpur, Uttar Pradesh. I am a MERN Stack Developer.
+            </div>
+            <div class="footer-center">
+                Phone : 7417470339 <br>
+                Saharanpur,Uttar Pradesh <br>
+                247554
+            </div>
+            <div class="footer-right">
+                Made by Rohit Panwar <br>
+                13-12-2023
+            </div>
+        </div>
+    </footer>
+</body>
+<script>
+    const nav = document.querySelector(".nav");
+    window.addEventListener("scroll", fixNav);
+
+    function fixNav() {
+        if (window.scrollY > nav.offsetHeight + 150) {
+            nav.classList.add("active");
+        } else {
+            nav.classList.remove("active");
+        }
+    }
+
+</script>
+
+</html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/star-background.css">
+    <link rel="stylesheet" href="css/navigation.css">
+    <link rel="stylesheet" href="css/photo-gallary.css">
+    <title>Document</title>
+    <style>
+        /* body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        } */
+
+        /* Navigation Bar Styles */
+        /* nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+        } */
+
+        /* .nav-links a {
+            float: left;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: space-between;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+            border-radius: 10px;
+        } */
+
+        /* .nav-links a.logo {
+            font-size: 1.5em;
+            font-weight: bold;
+        } */
+
+        /* .nav-links a:hover {
+            background-color: #ddd;
+            color: black;
+            transition-duration: 200ms;
+        } */
+
+        /* Search Bar Styles */
+        /* .search-container {
+            float: right;
+            padding: 14px 16px;
+        } */
+
+        /* #nav-input[type=text] {
+            padding: 6px;
+            margin-top: 8px;
+            font-size: 14px;
+            border: none;
+        }
+
+        #nav-btn {
+            background: #4CAF50;
+            color: white;
+            padding: 6px;
+            margin-top: 8px;
+            margin-left: 6px;
+            border: none;
+            cursor: pointer;
+        }
+
+        #nav-btn:hover {
+            background: #45a049;
+        } */
+
+        footer {
+            background-color: #333;
+            color: white;
+            padding: 20px;
+            text-align: center;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+
+        /* Footer Columns */
+        .footer-columns {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        /* Individual Column Styles */
+        .footer-left,
+        .footer-center,
+        .footer-right {
+            flex: 1;
+        }
+
+        /* Centered Content */
+        .footer-center {
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body style="scroll-behavior: auto;">
+    <!-- Navigation Bar -->
+    <!-- <nav>
+        <div class="nav-links">
+            <a href="#" class="logo">Logo</a>
+            <a href="/home.html">Home</a>
+            <a href="#">About</a>
+            <a href="/services.html">Services</a>
+            <a href="/ourWorks.html">Works</a>
+        </div>
+
+        <div class="search-container">
+            <input id="nav-input" type="text" placeholder="Search...">
+            <button id="nav-btn" type="submit">Search</button>
+        </div>
+    </nav> -->
+    <nav class="nav">
+        <div class="container">
+            <ul>
+                <li><a href="/home.html">Home</a></li>
+                <li><a href="/services.html">Services</a></li>
+                <li><a href="/ourWorks.html" class="current">Works</a></li>
+            </ul>
+        </div>
+    </nav>
+    <!-- Your page content goes here -->
+
+    <div id='stars'></div>
+    <div id='stars2'></div>
+    <div id='stars3'></div>
+    <!-- <div id='title'> -->
+    <header style="margin-top: 100px;">
+        <div class='container'>
+            <h1>Direction-aware hover effect</h1>
+            <p>CSS &amp; bits of JS</p>
+        </div>
+    </header>
+    <div class='container'>
+        <ul>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+            <li>
+                <a class='normal' href='#'>
+                    <svg viewBox='0 0 80 76' x='0px' y='0px'>
+                        <g>
+                            <path
+                                d='M 68.9708 24.8623 L 60.4554 2.3018 C 59.9641 0.7017 58.1628 -0.2583 56.5252 0.3817 L 1.9822 20.2222 C 0.3822 20.7022 -0.4179 22.6222 0.2222 24.2223 L 8.8624 47.7797 L 8.8624 35.1484 C 8.8624 29.5024 13.3425 24.8623 18.8857 24.8623 L 32.9442 24.8623 L 50.63 12.862 L 60.7829 24.8623 L 68.9708 24.8623 L 68.9708 24.8623 ZM 77.098 32.0625 L 18.8857 32.0625 C 17.2512 32.0625 16.0625 33.4511 16.0625 35.1484 L 16.0625 72.8491 C 16.0625 74.5477 17.2512 75.9375 18.8857 75.9375 L 77.098 75.9375 C 78.742 75.9375 79.9376 74.5477 79.9376 72.8491 L 79.9376 35.1484 C 79.9376 33.4511 78.742 32.0625 77.098 32.0625 L 77.098 32.0625 ZM 73.0626 68.0625 L 23.9375 68.0625 L 23.9375 61.0852 L 31.4704 43.7232 L 42.7696 57.6777 L 53.4138 46.8062 L 67.1695 41.9375 L 73.0626 55.0815 L 73.0626 68.0625 L 73.0626 68.0625 Z'>
+                            </path>
+                        </g>
+                    </svg>
+                </a>
+                <div class='info'>
+                    <h3>Single-origin coffee whatever</h3>
+                    <p>Williamsburg tofu polaroid, 90's Bushwick irony locavore ethnic meh messenger bag Truffaut
+                        jean shorts.</p>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+    <!-- </div> -->
+    <!-- Footer Section -->
+    <div>
+        <footer>
+            <div class="footer-columns">
+                <div class="footer-left">
+                    This is a test website made by Rohit Panwar from Saharanpur, Uttar Pradesh. I am a MERN Stack
+                    Developer.
+                </div>
+                <div class="footer-center">
+                    Phone : 7417470339 <br>
+                    Saharanpur,Uttar Pradesh <br>
+                    247554
+                </div>
+                <div class="footer-right">
+                    Made by Rohit Panwar <br>
+                    13-12-2023
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+<script>
+    const nodes = [].slice.call(document.querySelectorAll('li'), 0);
+    const directions = { 0: 'top', 1: 'right', 2: 'bottom', 3: 'left' };
+    const classNames = ['in', 'out'].map(p => Object.values(directions).map(d => `${p}-${d}`)).reduce((a, b) => a.concat(b));
+    const getDirectionKey = (ev, node) => {
+        const { width, height, top, left } = node.getBoundingClientRect();
+        const l = ev.pageX - (left + window.pageXOffset);
+        const t = ev.pageY - (top + window.pageYOffset);
+        const x = l - width / 2 * (width > height ? height / width : 1);
+        const y = t - height / 2 * (height > width ? width / height : 1);
+        return Math.round(Math.atan2(y, x) / 1.57079633 + 5) % 4;
+    };
+
+    class Item {
+        constructor(element) {
+            this.element = element;
+            this.element.addEventListener('mouseover', ev => this.update(ev, 'in'));
+            this.element.addEventListener('mouseout', ev => this.update(ev, 'out'));
+        }
+
+        update(ev, prefix) {
+            this.element.classList.remove(...classNames);
+            this.element.classList.add(`${prefix}-${directions[getDirectionKey(ev, this.element)]}`);
+        }
+    }
+
+
+    nodes.forEach(node => new Item(node));
+
+
+    const nav = document.querySelector(".nav");
+    window.addEventListener("scroll", fixNav);
+
+    function fixNav() {
+        if (window.scrollY > nav.offsetHeight + 150) {
+            nav.classList.add("active");
+        } else {
+            nav.classList.remove("active");
+        }
+    }
+
+</script>
+
+</html>
